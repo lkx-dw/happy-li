@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+    <style>
+        #header {
+            width: 500px;
+            height: 50px;
+            background-color: #666769;
+            margin-bottom: 50px;
+        }
+
+        #content {
+            float: left;
+            width: 200px;
+            background-color: #f41a3b;
+        }
+
+        #sidebar {
+            float: right;
+            width: 100px;
+            background-color: #f0d2e6;
+        }
+
+        #sidebar2 {
+            float: left;
+            background-color: #146a4c;
+            width: 200px;
+        }
+
+        #footer {
+
+            float: left;
+            width: 500px;
+            background-color: #f2f917;
+        }
+
+        .fu {
+            width: 500px;
+            background-color: white;
+            margin-bottom: 50px;
+        }
+
+        .last {
+            width: 500px;
+            background-color: aliceblue;
+            margin-top: 50px;
+        }
+
+        .fu::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .last::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="header">
+            <h1>这里是标题</h1>
+        </div>
+        <div class="fu">
+            <div id="sidebar">
+                <p>侧边栏1</p>
+            </div>
+            <div id="sidebar2">
+                <p>侧边栏2</p>
+            </div>
+            <div id="content">
+                <p>这里是一些文字</P>
+                <p>再来一大段文字</P>
+                <p>地图投影</p>
+            </div>
+        </div>
+        <div class="last">
+            <div id="footer">
+                <p>没人关注的页脚</P>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
