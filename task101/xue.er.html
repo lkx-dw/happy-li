@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学而</title>
+    <style>
+        .page {
+            background-color: #F4F4F4;
+            border: 2px rgb(84, 72, 72) solid;
+            width: 1110px;
+            height: 1428px;
+            margin: 0 auto;
+        }
+
+        .one {
+            background-color: rgb(255, 255, 255);
+            height: 62px;
+        }
+
+        .two {
+            height: 270px;
+            width: 775px;
+            margin: 0 auto;
+        }
+
+        .three {
+            width: 775px;
+            height: 312px;
+            background-color: rgb(255, 255, 255);
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+
+        .four {
+            width: 775px;
+            height: 275px;
+            background-color: rgb(255, 255, 255);
+            margin: 0 auto;
+            margin-bottom: 10px;
+
+        }
+
+        .five {
+            width: 775px;
+            height: 317px;
+            background-color: rgb(255, 255, 255);
+            margin: 0 auto;
+            margin-bottom: 52px;
+
+        }
+
+        .six {
+            height: 94px;
+            background-color: #333333;
+        }
+
+        .nav {
+            width: 790px;
+            background-color: rgb(255, 255, 255);
+            height: 62px;
+            list-style: none;
+            line-height: 62px;
+            margin: 0 auto;
+            display: flex;
+
+        }
+
+        .nav_li {
+            margin-right: 50px;
+        }
+
+        a {
+            color: #6A6A6A;
+            text-decoration: none;
+        }
+
+        .one a:hover {
+            color: #F14439;
+        }
+
+        .three a:hover {
+            color: #F14439;
+        }
+
+        .top_li:hover {
+            background-color: #32C397;
+            color: white;
+        }
+
+        .subjects_ke:hover {
+            background-color: #32C397;
+        }
+
+        .one a:focus {
+            color: #F14439;
+            border-top: 5px #F14439 solid;
+            padding-top: 15px;
+        }
+
+        .one1 {
+            color: #32C397;
+            margin-right: 35px;
+        }
+
+        #tu1 {
+            width: 23px;
+        }
+
+        #tu2 {
+            line-height: 80px;
+        }
+
+        #fan {
+            color: aliceblue;
+            font-size: large;
+            background-color: #28C092;
+            border-style: hidden;
+            width: 100px;
+            height: 35px;
+            margin-right: 0;
+        }
+
+        .top {
+            display: flex;
+            height: 80px;
+        }
+
+        .top_li {
+            width: 70px;
+            height: 70px;
+            border-radius: 50% 50% 50% 50%;
+            border: 2px #28C092 solid;
+            list-style: none;
+            line-height: 70px;
+            margin-left: 80px;
+            margin-top: 10px;
+            text-align: center;
+            font-size: 25px;
+            color: #28C092;
+        }
+
+        .middle {
+            display: flex;
+            height: 110px;
+
+        }
+
+        .middle_ul {
+            border-left: hidden;
+            border-bottom: hidden;
+            border-top: hidden;
+            border-right: 1px gray solid;
+            margin-left: 20px;
+            padding: 0px 15px;
+            list-style-type: disc;
+
+        }
+
+        .middle_right {
+            border: hidden;
+            list-style-type: disc;
+
+        }
+
+        .bottom {
+            display: flex;
+            list-style: none;
+        }
+
+        .bottom .bottom_li {
+            margin-left: 100px;
+
+        }
+
+        .bottom li {
+            margin-left: 130px;
+            margin-top: 30px;
+
+        }
+
+        .titler {
+            list-style: none;
+            text-align: center;
+            border: hidden;
+            padding: 20px 0 0 0;
+        }
+
+        .titler_li {
+            color: #32C397;
+        }
+
+        .subjects {
+            width: 600px;
+            height: 90px;
+            display: flex;
+            margin: 0 auto;
+            border: hidden;
+            list-style: none;
+        }
+
+        .subjects li {
+            width: 120px;
+            text-align: center;
+            border: 1.5px #32C397 solid;
+            padding: 20px 10px 10px 10px;
+            font-size: 13px;
+        }
+
+        .subjects .number2 {
+            font-size: 40px;
+            border-top: hidden;
+        }
+
+        .subjects .number1 {
+            font-size: 40px;
+            border-left: white;
+            border-bottom: hidden;
+        }
+
+        .subjects .number3 {
+            font-size: 40px;
+            border-bottom: hidden;
+        }
+
+        .subjects .number5 {
+            font-size: 40px;
+            border-right: white;
+            border-bottom: hidden;
+        }
+
+        .subjects_a {
+            color: #F14439;
+        }
+
+        .header {
+            list-style: none;
+            text-align: center;
+            border: hidden;
+            padding: 20px 0 0 0;
+        }
+
+        .header_li {
+            color: #32C397;
+        }
+
+        .container {
+            width: 680px;
+            height: 90px;
+            display: flex;
+            margin: 0 auto;
+        }
+
+        .container .container_div {
+            background-color: #F47B73;
+            width: 130px;
+            height: 70px;
+            margin-left: 30px;
+            margin-top: 50px;
+            text-align: center;
+            border: hidden;
+            padding-top: 25px;
+            position: relative;
+        }
+
+        .container a {
+            color: #FBD7D5;
+        }
+
+        .into {
+            display: none;
+            position: absolute;
+            top: 131px;
+            left: 0px;
+            background: url(tuzi.png) no-repeat center bottom;
+            background-size: 83px;
+            width: 130px;
+            height: 60px;
+            transition: all 0.3s;
+        }
+
+        .outo {
+            width: 130px;
+            height: 100px;
+            background-color: #F14439;
+            display: none;
+        }
+
+        .container_div a:hover .into {
+            display: block;
+            margin-top: -195px;
+        }
+
+        .container_div a:hover .outo {
+            display: block;
+            margin-top: -70px;
+        }
+
+        .ending {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body class="page">
+    <div>
+
+        <div class="one">
+            <ul class="nav">
+                <li class="one1"><img src="xue.png" id="tu1">学而</li>
+                <li class="nav_li"><a href="#">首页</a></li>
+                <li class="nav_li"><a href="#">分类查看</a></li>
+                <li class="nav_li"><input type="text" style="border: 2px #F14439 solid; width: 200px;"></li>
+                <li class="nav_li" id="tu2"><img src="hei.png" style="width: 30px;"></li>
+                <li class="nav_li"><input type="button" name="close" value="退出" onclick="window.close()" id="fan">
+                </li>
+            </ul>
+        </div>
+        <div class="two"><img src="image.png" style="width: 775px;">
+        </div>
+        <div class="three">
+            <ul class="top">
+                <li class="top_li">公</li>
+                <li class="top_li">通</li>
+                <li class="top_li">素</li>
+                <li class="top_li">专</li>
+            </ul>
+            <ul class="middle">
+                <ul class="middle_ul">
+                    <a href="#">
+                        <li>界面设计与应用<br><small>房子</small></li>
+                    </a>
+                    <a href="#">
+                        <li>Java程序编程<br><small>赵三金</small></li>
+                    </a>
+                    <a href="#">
+                        <li>设计师的自我修养<br><small>分享课程</small></li>
+                    </a>
+                </ul>
+                <ul class="middle_ul">
+                    <a href="#">
+                        <li>计算机基础<br><small>胡薇</small></li>
+                    </a>
+                    <a href="#">
+                        <li>植物观赏学基础<br><small>韩一伟</small></li>
+                    </a>
+                    <a href="#">
+                        <li>生活常识101<br><small>分享</small></li>
+                    </a>
+                </ul>
+                <ul class="middle_ul">
+                    <a href="#">
+                        <li>新生引导课堂<br><small>开学季</small></li>
+                    </a>
+                    <a href="#">
+                        <li>党课精神研讨课<br><small>分享课程</small></li>
+                    </a>
+                    <a href="#">
+                        <li>专业方向<br><small>毕业生</small></li>
+                    </a>
+                </ul>
+                <ul class="middle_right">
+                    <a href="#">
+                        <li>影视广告摄影基础<br><small>分享课程</small></li>
+                    </a>
+                    <a href="#">
+                        <li>程序员的养成<br><small>赵多金</small></li>
+                    </a>
+                    <a href="#">
+                        <li>如何让设计师改稿<br><small>甲方</small></li>
+                    </a>
+                </ul>
+            </ul>
+            <ul class="bottom">
+                <li class="bottom_li"><img src="jiahao.png"></li>
+                <li><img src="jiahao.png"></li>
+                <li><img src="jiahao.png"></li>
+                <li><img src="jiahao.png"></li>
+            </ul>
+        </div>
+        <div class="four">
+            <ul class="titler">
+                <li>最热课程动态</li>
+                <li class="titler_li"><small>精心为您推荐最佳口碑课程排行NO.1-NO.5</small></li>
+            </ul>
+            <div>
+                <div class="subjects">
+                    <li class="subjects_ke"><a href="#">常勇<br>《化学生活》</a></li>
+                    <li class="number2"><a href="#" class="subjects_a"><ins>02</ins></a></li>
+                    <li class="subjects_ke"><a href="#">张勇<br>《java语言程序设计》</a></li>
+                    <li class="number2"><a href="#" class="subjects_a"><ins>04</ins></a></li>
+                    <li class="subjects_ke"><a href="#">张国<br>《计算机组装》</a></li>
+                </div>
+                <div class="subjects">
+                    <li class="number1"><a href="#" class="subjects_a"><ins>01</ins></a></li>
+                    <li class="subjects_ke"><a href="#">李达<br>《大学生语文》</a></li>
+                    <li class="number3"><a href="#" class="subjects_a"><ins>03</ins></a></li>
+                    <li class="subjects_ke"><a href="#">苏燕<br>《视觉语言》</a></li>
+                    <li class="number5"><a href="#" class="subjects_a"><ins>05</ins></a></li>
+                </div>
+            </div>
+        </div>
+        <div class="five">
+            <ul class="header">
+                <li>猜你喜欢课程</li>
+                <li class="header_li"><small>根据您的浏览记录，推荐相似课程列表</small></li>
+            </ul>
+            <div class="container">
+                <div class="container_div"><a href="#">《毛泽东思想》<br><small>赵三金</small>
+                        <div class="into"></div>
+                        <div class="outo"></div>
+                    </a>
+                </div>
+                <div class="container_div"><a href="#">《邓小平理论》<br><small>胡一薇</small>
+                        <div class="into"></div>
+                        <div class="outo"></div>
+                    </a></div>
+                <div class="container_div"><a href="#">《科学发展观》<br><small>梁非凡</small>
+                        <div class="into"></div>
+                        <div class="outo"></div>
+                    </a></div>
+                <div class="container_div"><a href="#">《三个代表》<br><small>韩一尾</small>
+                        <div class="into"></div>
+                        <div class="outo"></div>
+                    </a></div>
+            </div>
+        </div>
+        <div class="six">
+            <div class="ending"><img src="bottom.png"></div>
+        </div>
+    </div>
+</body>
+
+</html>
