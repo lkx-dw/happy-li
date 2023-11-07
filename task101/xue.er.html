@@ -8,9 +8,8 @@
     <style>
         .page {
             background-color: #F4F4F4;
-            border: 2px rgb(84, 72, 72) solid;
-            width: 1110px;
-            height: 1428px;
+            width: 100%;
+            height: 100%;
             margin: 0 auto;
         }
 
@@ -57,7 +56,7 @@
         }
 
         .nav {
-            width: 790px;
+            width: 810px;
             background-color: rgb(255, 255, 255);
             height: 62px;
             list-style: none;
@@ -68,7 +67,28 @@
         }
 
         .nav_li {
-            margin-right: 50px;
+            margin-right: 40px;
+        }
+
+        #texter {
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-right: 40px;
+            margin-left: 70px;
+            border: 1px #F14439 solid;
+            width: 220px;
+            height: 25px;
+            display: flex;
+        }
+
+        .texter1 {
+            border: 1px #F14439 solid;
+            width: 70%;
+        }
+
+        .texter2 {
+            width: 30%;
+            height: 25px;
         }
 
         a {
@@ -91,7 +111,13 @@
 
         .subjects_ke:hover {
             background-color: #32C397;
+
         }
+
+        .subjects_ke:hover a {
+            color: white;
+        }
+
 
         .one a:focus {
             color: #F14439;
@@ -175,9 +201,19 @@
         }
 
         .bottom li {
-            margin-left: 130px;
+            margin-left: 135px;
             margin-top: 30px;
-
+            width: 20px;
+            height: 20px;
+            border: 1px #28C092 solid;
+            border-radius: 50% 50% 50% 50%;
+            color: #28C092;
+            font-weight: 100;
+            font-size: 30px;
+            line-height: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .titler {
@@ -252,10 +288,20 @@
             margin: 0 auto;
         }
 
-        .container .container_div {
+        .container_index {
+            position: absolute;
+            left: 0;
+            top: 0;
             background-color: #F47B73;
             width: 130px;
-            height: 70px;
+            height: 90px;
+            border: hidden;
+            z-index: 2;
+        }
+
+        .container .container_div {
+            width: 130px;
+            height: 90px;
             margin-left: 30px;
             margin-top: 50px;
             text-align: center;
@@ -269,33 +315,42 @@
         }
 
         .into {
-            display: none;
+            background-color: transparent;
             position: absolute;
-            top: 131px;
-            left: 0px;
-            background: url(tuzi.png) no-repeat center bottom;
-            background-size: 83px;
-            width: 130px;
-            height: 60px;
-            transition: all 0.3s;
+            top: 0px;
+            left: 20px;
+            width: 90px;
+            height: 30px;
+            opacity: 0;
+            z-index: 1;
+            transition: all 0.8s;
+            /*  margin-top: 0; */
         }
 
-        .outo {
+        /*.outo {
+            position: absolute;
+            overflow: hidden;
             width: 130px;
             height: 100px;
             background-color: #F14439;
             display: none;
+            z-index: -1;
+        }*/
+
+        .container_div:hover .container_index {
+            background-color: #F14439;
         }
 
-        .container_div a:hover .into {
+        .container_div:hover .into {
+            opacity: 1;
             display: block;
-            margin-top: -195px;
+            top: -30px;
         }
 
-        .container_div a:hover .outo {
+        /*.container_div a:hover .outo {
             display: block;
             margin-top: -70px;
-        }
+        }*/
 
         .ending {
             display: flex;
@@ -313,7 +368,11 @@
                 <li class="one1"><img src="xue.png" id="tu1">学而</li>
                 <li class="nav_li"><a href="#">首页</a></li>
                 <li class="nav_li"><a href="#">分类查看</a></li>
-                <li class="nav_li"><input type="text" style="border: 2px #F14439 solid; width: 200px;"></li>
+                <li id="texter">
+                    <input type="text" class="texter1">
+                    <img src="sousuo.png" class="texter2">
+
+                </li>
                 <li class="nav_li" id="tu2"><img src="hei.png" style="width: 30px;"></li>
                 <li class="nav_li"><input type="button" name="close" value="退出" onclick="window.close()" id="fan">
                 </li>
@@ -375,10 +434,10 @@
                 </ul>
             </ul>
             <ul class="bottom">
-                <li class="bottom_li"><img src="jiahao.png"></li>
-                <li><img src="jiahao.png"></li>
-                <li><img src="jiahao.png"></li>
-                <li><img src="jiahao.png"></li>
+                <li class="bottom_li">+</li>
+                <li>+</li>
+                <li>+</li>
+                <li>+</li>
             </ul>
         </div>
         <div class="four">
@@ -409,23 +468,23 @@
                 <li class="header_li"><small>根据您的浏览记录，推荐相似课程列表</small></li>
             </ul>
             <div class="container">
-                <div class="container_div"><a href="#">《毛泽东思想》<br><small>赵三金</small>
-                        <div class="into"></div>
-                        <div class="outo"></div>
-                    </a>
+                <div class="container_div"> <a href="#" class="container_index">
+                        <br>《毛泽东思想》<br><small>赵三金</small> </a>
+                    <div> <img src="tuzi.png" class="into"></div>
                 </div>
-                <div class="container_div"><a href="#">《邓小平理论》<br><small>胡一薇</small>
-                        <div class="into"></div>
-                        <div class="outo"></div>
-                    </a></div>
-                <div class="container_div"><a href="#">《科学发展观》<br><small>梁非凡</small>
-                        <div class="into"></div>
-                        <div class="outo"></div>
-                    </a></div>
-                <div class="container_div"><a href="#">《三个代表》<br><small>韩一尾</small>
-                        <div class="into"></div>
-                        <div class="outo"></div>
-                    </a></div>
+                <div class="container_div">
+                    <a href="#" class="container_index"><br>《邓小平理论》<br><small>胡一薇</small></a>
+                    <div><img src="tuzi.png" class="into"></div>
+                </div>
+                <div class="container_div">
+                    <a href="#" class="container_index"><br>《科学发展观》<br><small>梁非凡</small>
+                    </a>
+                    <div> <img src="tuzi.png" class="into"></div>
+                </div>
+                <div class="container_div"><a href="#" class="container_index"><br>《三个代表》<br><small>韩一尾</small>
+                    </a>
+                    <div><img src="tuzi.png" class="into"></div>
+                </div>
             </div>
         </div>
         <div class="six">
